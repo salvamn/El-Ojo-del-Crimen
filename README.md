@@ -1,4 +1,8 @@
-# actualizaciones
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/fe7de7c6-5fd5-4d17-95f3-57cbc5389bea">
+</div>
+
+<br/>
 
 ⚠️ Esta herramienta fue creada con fines educativos y de auditoría personal. 
 El mal uso de esta aplicación puede violar la privacidad de los usuarios. ⚠️
