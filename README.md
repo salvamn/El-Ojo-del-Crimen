@@ -26,7 +26,9 @@ Esta herramienta está diseñada exclusivamente para fines educativos y de audit
 ![image](https://github.com/user-attachments/assets/08275e65-6ea6-42c5-b24f-14ee8f8c13ca)
 
 ## Click en la imagen 
-[![Demo del Software](![image](https://github.com/user-attachments/assets/19e285b9-1694-474b-91f1-fd4e125430f1)]([https://youtu.be/G1Em1alNEHM](https://youtu.be/G1Em1alNEHM))
+[![Demo del Software](https://github.com/user-attachments/assets/19e285b9-1694-474b-91f1-fd4e125430f1)]([https://youtu.be/G1Em1alNEHM](https://youtu.be/G1Em1alNEHM))
+[![Demo del Software](https://github.com/TU_USUARIO/TU_REPO/ruta/imagen.jpg)](https://youtu.be/G1Em1alNEHM)
+
 
 
 
