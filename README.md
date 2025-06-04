@@ -23,4 +23,8 @@ Esta herramienta está diseñada exclusivamente para fines educativos y de audit
 
 - .exe: https://github.com/salvamn/actualizaciones/releases/tag/ojeador-v1.4
 
+![image](https://github.com/user-attachments/assets/08275e65-6ea6-42c5-b24f-14ee8f8c13ca)
+
+
+## Click en la imagen 
 ![Captura de pantalla 2025-05-19 083047](https://github.com/user-attachments/assets/5eb95d6a-29d6-453d-bbcb-e725dafa4954)
