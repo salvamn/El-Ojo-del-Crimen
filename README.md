@@ -4,6 +4,10 @@
 
 <br/>
 
+# Disponible
+![Windows XP](https://github.com/user-attachments/assets/ddea70e6-589c-4488-a3e0-e3e89e1d6f7c)
+<br/>
+
 ⚠️ Esta herramienta fue creada con fines educativos y de auditoría personal. 
 El mal uso de esta aplicación puede violar la privacidad de los usuarios. ⚠️
 
