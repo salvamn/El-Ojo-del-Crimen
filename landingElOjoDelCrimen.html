@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Ojo del Crimen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0a0a0a',
+            secondary: '#1a1a1a',
+            accent: '#ff4444',
+            accentDark: '#cc3333'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+            'float': 'float 3s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 20px rgba(255, 68, 68, 0.3)' },
+              '50%': { boxShadow: '0 0 40px rgba(255, 68, 68, 0.6)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #ff4444, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(255, 68, 68, 0.2);
+    }
+    
+    .section-enter {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    
+    .section-enter.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .feature-card {
+      background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(20, 20, 20, 0.9));
+      border: 1px solid rgba(255, 68, 68, 0.1);
+      transition: all 0.4s ease;
+    }
+    
+    .feature-card:hover {
+      border-color: rgba(255, 68, 68, 0.4);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(255, 68, 68, 0.15);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ff4444, #cc3333);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 68, 68, 0.4);
+    }
+  </style>
+</head>
+<body class="gradient-bg text-white font-sans overflow-x-hidden">
+  <header class="relative min-h-screen flex items-center justify-center">
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-20 left-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style="animation-delay: -1s;"></div>
+    </div>
+    
+    <div class="text-center z-10 px-4 animate-fade-in">
+      <div class="mb-8">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 text-gradient leading-tight">
+          El Ojo del Crimen
+        </h1>
+        <div class="w-32 h-1 bg-gradient-to-r from-accent to-transparent mx-auto mb-8"></div>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Análisis forense de contraseñas y recuperación desde navegadores locales
+        </p>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+        <a href="#demo" class="btn-primary px-8 py-4 text-black font-semibold rounded-full text-lg hover:scale-105 transition-transform">
+          Ver Demostración
+        </a>
+        <a href="#features" class="glass-effect px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-all">
+          Explorar Características
+        </a>
+      </div>
+    </div>
+    
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="demo" class="py-20 section-enter">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-r from-accent to-transparent rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity"></div>
+            <img src="https://img.youtube.com/vi/G1Em1alNEHM/0.jpg" 
+                 alt="Demo Video" 
+                 class="relative w-full rounded-2xl shadow-2xl hover-lift cursor-pointer"
+                 onclick="openVideo()">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="bg-accent/90 rounded-full p-4 animate-pulse-glow">
+                <svg class="w-12 h-12 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2 space-y-6">
+          <h2 class="text-4xl font-bold text-gradient">¿Qué es?</h2>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Este sistema permite recuperar contraseñas almacenadas en navegadores como Chrome o Edge, 
+            desencriptarlas y visualizarlas en una interfaz limpia. Es ideal para tareas de auditoría, 
+            investigación forense o recuperación de datos.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-accent rounded-full"></div>
+              <span class="text-gray-300">Recuperación segura de credenciales</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-accent rounded-full"></div>
+              <span class="text-gray-300">Interfaz intuitiva y moderna</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-accent rounded-full"></div>
+              <span class="text-gray-300">Análisis forense profesional</span>
+            </div>
+          </div>
+          <a href="https://youtu.be/G1Em1alNEHM" 
+             target="_blank" 
+             class="btn-primary inline-flex items-center px-6 py-3 text-black font-semibold rounded-full">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Ver Demo Completa
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-20 section-enter">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gradient mb-4">Características Principales</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Herramientas profesionales para análisis forense y recuperación de datos
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div class="feature-card p-8 rounded-2xl hover-lift">
+          <div class="text-4xl mb-4">🔍</div>
+          <h3 class="text-xl font-semibold mb-3 text-accent">Extracción de Contraseñas</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Recupera las credenciales almacenadas en bases de datos SQLite de manera eficiente y segura.
+          </p>
+        </div>
+        
+        <div class="feature-card p-8 rounded-2xl hover-lift">
+          <div class="text-4xl mb-4">🔐</div>
+          <h3 class="text-xl font-semibold mb-3 text-accent">Desencriptación Automática</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Desencripta las contraseñas usando la clave local del sistema con algoritmos avanzados.
+          </p>
+        </div>
+        
+        <div class="feature-card p-8 rounded-2xl hover-lift">
+          <div class="text-4xl mb-4">🧠</div>
+          <h3 class="text-xl font-semibold mb-3 text-accent">Interfaz Intuitiva</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Interfaz gráfica moderna con botones claros para cargar, visualizar y exportar datos.
+          </p>
+        </div>
+        
+        <div class="feature-card p-8 rounded-2xl hover-lift">
+          <div class="text-4xl mb-4">🛡️</div>
+          <h3 class="text-xl font-semibold mb-3 text-accent">Información del Sistema</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Muestra detalles completos como IP, CPU, RAM y configuración del entorno de trabajo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 section-enter">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="glass-effect rounded-3xl p-12">
+        <h2 class="text-4xl font-bold text-gradient mb-6">Descargar y Probar</h2>
+        <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+          Obtén la última versión desde GitHub Releases y comienza a utilizar esta poderosa 
+          herramienta de análisis forense.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://github.com/tu_usuario/el-ojo-del-crimen/releases" 
+             target="_blank" 
+             class="btn-primary px-8 py-4 text-black font-semibold rounded-full text-lg inline-flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2M7 18C7.58 18 8.05 18.47 8.05 19.05C8.05 19.63 7.58 20.1 7 20.1C6.42 20.1 5.95 19.63 5.95 19.05C5.95 18.47 6.42 18 7 18Z"/>
+            </svg>
+            Descargar Ahora
+          </a>
+          
+          <a href="https://github.com/tu_usuario/el-ojo-del-crimen" 
+             target="_blank" 
+             class="glass-effect px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-all inline-flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            Ver en GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-gray-800 py-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="text-gradient text-2xl font-bold mb-4">El Ojo del Crimen</div>
+      <p class="text-gray-500 mb-4">
+        © 2025 El Ojo del Crimen. Proyecto con fines educativos.<br>
+        Uso bajo responsabilidad del usuario.
+      </p>
+      <div class="w-24 h-px bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-4"></div>
+      <p class="text-gray-600 text-sm">
+        Desarrollado por <span class="text-accent font-medium">Salvador Mellado Nuñez</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section-enter').forEach(el => {
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    function openVideo() {
+      window.open('https://youtu.be/G1Em1alNEHM', '_blank');
+    }
+
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.className = 'fixed w-1 h-1 bg-accent/30 rounded-full pointer-events-none z-0';
+      particle.style.left = Math.random() * 100 + 'vw';
+      particle.style.top = '100vh';
+      particle.style.animation = `float ${3 + Math.random() * 2}s ease-in-out infinite`;
+      document.body.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 5000);
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 2000);
+  </script>
+</body>
+</html>
