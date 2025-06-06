@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>El Ojo del Crimen</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -122,6 +123,7 @@
   </style>
 </head>
 <body class="gradient-bg text-white font-sans overflow-x-hidden">
+  <!-- Hero Section -->
   <header class="relative min-h-screen flex items-center justify-center">
     <div class="absolute inset-0 opacity-30">
       <div class="absolute top-20 left-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
@@ -147,8 +149,21 @@
           Explorar Características
         </a>
       </div>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+        <a href="https://github.com/salvamn/El-Ojo-del-Crimen/releases/tag/ojeador-v1.4"
+           target="_blank"
+           class="btn-primary px-8 py-4 text-black font-semibold rounded-full text-lg hover:scale-105 transition-transform flex items-center gap-2">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13 7H7v6h6V7z" fill="none"/>
+            <path d="M4 4v12h12V4H4zm8 8H8V8h4v4z" />
+            <path d="M9 16h2v2H9z" />
+          </svg>
+          Descargar Software
+        </a>
+      </div>
     </div>
     
+    <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
       <div class="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
         <div class="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
@@ -156,8 +171,215 @@
     </div>
   </header>
 
+  <!-- Warning Section -->
+  <section class="py-16 section-enter">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="glass-effect border-2 border-red-500/50 rounded-2xl p-8 mb-8">
+        <div class="text-center mb-6">
+          <div class="text-6xl mb-4">⚠️</div>
+          <h2 class="text-2xl font-bold text-red-400 mb-4">ADVERTENCIAS IMPORTANTES</h2>
+        </div>
+        
+        <div class="space-y-4 text-gray-300">
+          <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+            <p class="text-center">
+              <span class="text-red-400">⚠️</span> Esta herramienta fue creada con fines educativos y de auditoría personal. 
+              El mal uso de esta aplicación puede violar la privacidad de los usuarios. <span class="text-red-400">⚠️</span>
+            </p>
+          </div>
+          
+          <div class="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
+            <p class="text-center">
+              <span class="text-red-400">⚠️</span> Este sistema está siendo monitorizado. 
+              Toda actividad puede ser registrada y requiere conexión a internet activa. <span class="text-red-400">⚠️</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 section-enter">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gradient mb-6">¿Qué es El Ojo del Crimen?</h2>
+      </div>
+      
+      <div class="space-y-8">
+        <div class="glass-effect rounded-2xl p-8">
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            El Ojo del Crimen es una herramienta educativa y de auditoría de seguridad que demuestra las 
+            vulnerabilidades presentes en la gestión local de contraseñas de navegadores basados en Chromium 
+            (como Google Chrome, Microsoft Edge, Brave, entre otros) en sistemas Windows.
+          </p>
+          
+          <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Esta aplicación permite extraer, descifrar y visualizar las credenciales almacenadas localmente 
+            en el equipo del usuario, usando técnicas que ilustran cómo un programa con permisos estándar 
+            puede acceder a datos sensibles.
+          </p>
+        </div>
+        
+        <div class="glass-effect rounded-2xl p-8">
+          <h3 class="text-2xl font-bold text-accent mb-4">Propósito</h3>
+          <p class="text-gray-300 text-lg leading-relaxed">
+            Esta herramienta está diseñada exclusivamente para fines educativos y de auditoría personal, 
+            con el objetivo de aumentar la conciencia sobre las vulnerabilidades que existen en la gestión 
+            local de credenciales y promover mejores prácticas de seguridad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works Section -->
+  <section id="how-it-works" class="py-20 section-enter">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gradient mb-6">¿Cómo Funciona?</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Proceso técnico de extracción y desencriptación de contraseñas
+        </p>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Diagrama Visual -->
+        <div class="lg:w-1/2">
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-gradient-to-r from-accent to-transparent rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity"></div>
+            <!-- Diagrama explicativo del funcionamiento -->
+            <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-2xl hover-lift">
+              <div class="text-center mb-6">
+                <h3 class="text-xl font-bold text-accent mb-2">Proceso de Extracción</h3>
+                <p class="text-gray-400 text-sm">De navegador a contraseñas visibles</p>
+              </div>
+              
+              <!-- Diagrama de flujo -->
+              <div class="space-y-6">
+                <!-- 1. Navegador -->
+                <div class="flex items-center justify-center">
+                  <div class="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 w-32 text-center hover:bg-blue-500/30 transition-all">
+                    <div class="text-2xl mb-2">🌐</div>
+                    <div class="text-sm text-blue-300 font-semibold">Navegador</div>
+                    <div class="text-xs text-gray-400">Chrome/Edge</div>
+                  </div>
+                </div>
+                
+                <!-- Flecha hacia abajo -->
+                <div class="flex justify-center">
+                  <div class="text-accent text-3xl animate-bounce">↓</div>
+                </div>
+                
+                <!-- 2. Base de datos -->
+                <div class="flex items-center justify-center">
+                  <div class="bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-4 w-32 text-center hover:bg-yellow-500/30 transition-all">
+                    <div class="text-2xl mb-2">🗄️</div>
+                    <div class="text-sm text-yellow-300 font-semibold">SQLite DB</div>
+                    <div class="text-xs text-gray-400">Login Data</div>
+                  </div>
+                </div>
+                
+                <!-- Flecha hacia abajo -->
+                <div class="flex justify-center">
+                  <div class="text-accent text-3xl animate-bounce" style="animation-delay: 0.2s;">↓</div>
+                </div>
+                
+                <!-- 3. Desencriptación -->
+                <div class="flex items-center justify-center">
+                  <div class="bg-red-500/20 border border-red-500/30 rounded-lg p-4 w-32 text-center hover:bg-red-500/30 transition-all">
+                    <div class="text-2xl mb-2">🔐</div>
+                    <div class="text-sm text-red-300 font-semibold">Desencripta</div>
+                    <div class="text-xs text-gray-400">AES-256</div>
+                  </div>
+                </div>
+                
+                <!-- Flecha hacia abajo -->
+                <div class="flex justify-center">
+                  <div class="text-accent text-3xl animate-bounce" style="animation-delay: 0.4s;">↓</div>
+                </div>
+                
+                <!-- 4. Resultado -->
+                <div class="flex items-center justify-center">
+                  <div class="bg-green-500/20 border border-green-500/30 rounded-lg p-4 w-32 text-center hover:bg-green-500/30 transition-all">
+                    <div class="text-2xl mb-2">👁️</div>
+                    <div class="text-sm text-green-300 font-semibold">Visualiza</div>
+                    <div class="text-xs text-gray-400">Contraseñas</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Información técnica -->
+              <div class="mt-6 glass-effect rounded-lg p-4">
+                <div class="text-xs text-gray-400 space-y-1">
+                  <div class="flex justify-between">
+                    <span>Base de datos:</span>
+                    <span class="text-accent">SQLite3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Explicación detallada -->
+        <div class="lg:w-1/2 space-y-6">
+          <h3 class="text-3xl font-bold text-gradient">Proceso Técnico</h3>
+          
+          <div class="space-y-4">
+            <div class="glass-effect rounded-lg p-4 hover-lift">
+              <div class="flex items-start space-x-3">
+                <div class="text-blue-400 text-xl">1️⃣</div>
+                <div>
+                  <h4 class="text-lg font-semibold text-blue-300 mb-2">Localización de Datos</h4>
+                  <p class="text-gray-400 text-sm">
+                    La herramienta localiza la base de datos SQLite donde los navegadores 
+                    Chromium almacenan las credenciales encriptadas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="glass-effect rounded-lg p-4 hover-lift">
+              <div class="flex items-start space-x-3">
+                <div class="text-yellow-400 text-xl">2️⃣</div>
+                <div>
+                  <h4 class="text-lg font-semibold text-yellow-300 mb-2">Extracción de Datos</h4>
+                  <p class="text-gray-400 text-sm">
+                    Se accede a la tabla "logins" de la base de datos y se extraen 
+                    los campos URL, usuario y contraseña encriptada.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div class="glass-effect rounded-lg p-4 hover-lift">
+              <div class="flex items-start space-x-3">
+                <div class="text-green-400 text-xl">4️⃣</div>
+                <div>
+                  <h4 class="text-lg font-semibold text-green-300 mb-2">Presentación</h4>
+                  <p class="text-gray-400 text-sm">
+                    Las contraseñas desencriptadas se muestran en una interfaz 
+                    organizada con opciones de búsqueda y exportación.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
   <section id="demo" class="py-20 section-enter">
     <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gradient mb-4">Demostración en Video</h2>
+        <p class="text-gray-400 text-lg">Observa la herramienta en funcionamiento</p>
+      </div>
+      
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="lg:w-1/2">
           <div class="relative group">
@@ -177,7 +399,7 @@
         </div>
         
         <div class="lg:w-1/2 space-y-6">
-          <h2 class="text-4xl font-bold text-gradient">¿Qué es?</h2>
+          <h3 class="text-4xl font-bold text-gradient">¿Qué Verás?</h3>
           <p class="text-gray-300 text-lg leading-relaxed">
             Este sistema permite recuperar contraseñas almacenadas en navegadores como Chrome o Edge, 
             desencriptarlas y visualizarlas en una interfaz limpia. Es ideal para tareas de auditoría, 
@@ -210,6 +432,7 @@
     </div>
   </section>
 
+  <!-- Features Section -->
   <section id="features" class="py-20 section-enter">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
@@ -232,7 +455,7 @@
           <div class="text-4xl mb-4">🔐</div>
           <h3 class="text-xl font-semibold mb-3 text-accent">Desencriptación Automática</h3>
           <p class="text-gray-400 leading-relaxed">
-            Desencripta las contraseñas usando la clave local del sistema con algoritmos avanzados.
+            Desencripta las contraseñas usando algoritmos avanzados.
           </p>
         </div>
         
@@ -255,102 +478,126 @@
     </div>
   </section>
 
-  <section class="py-20 section-enter">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <div class="glass-effect rounded-3xl p-12">
-        <h2 class="text-4xl font-bold text-gradient mb-6">Descargar y Probar</h2>
-        <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
-          Obtén la última versión desde GitHub Releases y comienza a utilizar esta poderosa 
-          herramienta de análisis forense.
-        </p>
+  <!-- Prerequisites Section -->
+  <section class="py-16 section-enter">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gradient mb-4">Requisitos del Sistema</h2>
+        <p class="text-gray-400 text-lg">Antes de usar la herramienta, asegúrate de cumplir estos requisitos</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-effect rounded-xl p-6 text-center hover-lift">
+          <div class="text-4xl mb-4">🖥️</div>
+          <h3 class="text-lg font-semibold text-accent mb-2">Sistema Operativo</h3>
+          <p class="text-gray-400">Windows 10/11</p>
+        </div>
         
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="https://github.com/tu_usuario/el-ojo-del-crimen/releases" 
-             target="_blank" 
-             class="btn-primary px-8 py-4 text-black font-semibold rounded-full text-lg inline-flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2M7 18C7.58 18 8.05 18.47 8.05 19.05C8.05 19.63 7.58 20.1 7 20.1C6.42 20.1 5.95 19.63 5.95 19.05C5.95 18.47 6.42 18 7 18Z"/>
-            </svg>
-            Descargar Ahora
-          </a>
-          
-          <a href="https://github.com/tu_usuario/el-ojo-del-crimen" 
-             target="_blank" 
-             class="glass-effect px-8 py-4 rounded-full text-lg hover:bg-white/10 transition-all inline-flex items-center">
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-            </svg>
-            Ver en GitHub
-          </a>
+        <div class="glass-effect rounded-xl p-6 text-center hover-lift">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-lg font-semibold text-accent mb-2">Navegadores</h3>
+          <p class="text-gray-400">Chrome, Edge, Brave<br>(Basados en Chromium)</p>
+        </div>
+        
+        <div class="glass-effect rounded-xl p-6 text-center hover-lift">
+          <div class="text-4xl mb-4">🌐</div>
+          <h3 class="text-lg font-semibold text-accent mb-2">Conexión a Internet</h3>
+          <p class="text-gray-400">Requiere conexión activa<br>para monitoreo del sistema</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 section-enter">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gradient mb-4">Preguntas Frecuentes</h2>
+        <p class="text-gray-400 text-lg">Resolvemos las dudas más comunes sobre la herramienta</p>
+      </div>
+      
+      <div class="space-y-4">
+        <div class="faq-item glass-effect rounded-xl p-6 cursor-pointer hover-lift" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold text-accent">¿Es legal usar esta herramienta?</h3>
+            <span class="faq-icon text-2xl">+</span>
+          </div>
+          <div class="faq-content hidden mt-4 text-gray-300">
+            <p>Sí, es completamente legal cuando se usa en tu propio equipo para fines educativos o auditoría personal. Sin embargo, usar esta herramienta en equipos ajenos sin autorización explícita puede violar leyes de privacidad y acceso no autorizado.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-effect rounded-xl p-6 cursor-pointer hover-lift" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold text-accent">¿Qué navegadores son compatibles?</h3>
+            <span class="faq-icon text-2xl">+</span>
+          </div>
+          <div class="faq-content hidden mt-4 text-gray-300">
+            <p>La herramienta funciona con navegadores basados en Chromium como Google Chrome, Microsoft Edge, Brave, Opera, y otros que utilicen la misma estructura de almacenamiento de credenciales.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-effect rounded-xl p-6 cursor-pointer hover-lift" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold text-accent">¿Cómo puedo protegerme de estas vulnerabilidades?</h3>
+            <span class="faq-icon text-2xl">+</span>
+          </div>
+          <div class="faq-content hidden mt-4 text-gray-300">
+            <p>Recomendamos usar gestores de contraseñas dedicados como Bitwarden o 1Password, habilitar la autenticación de dos factores, y evitar guardar contraseñas sensibles en el navegador.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item glass-effect rounded-xl p-6 cursor-pointer hover-lift" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold text-accent">¿Puedo usarlo en sistemas que no sean Windows?</h3>
+            <span class="faq-icon text-2xl">+</span>
+          </div>
+          <div class="faq-content hidden mt-4 text-gray-300">
+            <p>Actualmente, la herramienta está diseñada para sistemas Windows 10/11.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="border-t border-gray-800 py-12">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <div class="text-gradient text-2xl font-bold mb-4">El Ojo del Crimen</div>
-      <p class="text-gray-500 mb-4">
-        © 2025 El Ojo del Crimen. Proyecto con fines educativos.<br>
-        Uso bajo responsabilidad del usuario.
-      </p>
-      <div class="w-24 h-px bg-gradient-to-r from-transparent via-accent to-transparent mx-auto mb-4"></div>
-      <p class="text-gray-600 text-sm">
-        Desarrollado por <span class="text-accent font-medium">Salvador Mellado Nuñez</span>
-      </p>
+  <!-- Footer -->
+  <footer class="py-8 text-center text-gray-500 text-sm">
+    <div>
+      <span>&copy; 2025 El Ojo del Crimen. Desarrollado por <span class="text-accent">Salvador Mellado.</span> Uso educativo y de auditoría personal.</span>
     </div>
   </footer>
 
+  <!-- FAQ Toggle Script -->
   <script>
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
+    function toggleFaq(item) {
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+      // Cierra todos los demás
+      document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(el => el.textContent = '+');
+      // Abre/cierra el actual
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        icon.textContent = '−';
+      } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+      }
+    }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.section-enter').forEach(el => {
-      observer.observe(el);
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+    // Animación de entrada de secciones
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.section-enter').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), 200 + i * 200);
       });
     });
 
+    // Abrir video demo
     function openVideo() {
       window.open('https://youtu.be/G1Em1alNEHM', '_blank');
     }
-
-    function createParticle() {
-      const particle = document.createElement('div');
-      particle.className = 'fixed w-1 h-1 bg-accent/30 rounded-full pointer-events-none z-0';
-      particle.style.left = Math.random() * 100 + 'vw';
-      particle.style.top = '100vh';
-      particle.style.animation = `float ${3 + Math.random() * 2}s ease-in-out infinite`;
-      document.body.appendChild(particle);
-
-      setTimeout(() => {
-        particle.remove();
-      }, 5000);
-    }
-
-    // Create particles periodically
-    setInterval(createParticle, 2000);
   </script>
 </body>
 </html>
