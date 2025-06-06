@@ -24,7 +24,7 @@ Esta herramienta está diseñada exclusivamente para fines educativos y de audit
 <br>
 
 - contraseña: admin
-
+- https://salvamn.github.io/El-Ojo-del-Crimen/
 - .exe: https://github.com/salvamn/actualizaciones/releases/tag/ojeador-v1.4
 
 ![image](https://github.com/user-attachments/assets/08275e65-6ea6-42c5-b24f-14ee8f8c13ca)
