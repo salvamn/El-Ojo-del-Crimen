@@ -123,7 +123,6 @@
   </style>
 </head>
 <body class="gradient-bg text-white font-sans overflow-x-hidden">
-  <!-- Hero Section -->
   <header class="relative min-h-screen flex items-center justify-center">
     <div class="absolute inset-0 opacity-30">
       <div class="absolute top-20 left-10 w-64 h-64 bg-accent/20 rounded-full blur-3xl animate-float"></div>
@@ -163,7 +162,6 @@
       </div>
     </div>
     
-    <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
       <div class="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
         <div class="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
@@ -171,7 +169,6 @@
     </div>
   </header>
 
-  <!-- Warning Section -->
   <section class="py-16 section-enter">
     <div class="max-w-4xl mx-auto px-4">
       <div class="glass-effect border-2 border-red-500/50 rounded-2xl p-8 mb-8">
@@ -199,7 +196,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section class="py-16 section-enter">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -233,7 +229,6 @@
     </div>
   </section>
 
-  <!-- How it Works Section -->
   <section id="how-it-works" class="py-20 section-enter">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
@@ -244,20 +239,16 @@
       </div>
       
       <div class="flex flex-col lg:flex-row items-center gap-12">
-        <!-- Diagrama Visual -->
         <div class="lg:w-1/2">
           <div class="relative group">
             <div class="absolute -inset-4 bg-gradient-to-r from-accent to-transparent rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity"></div>
-            <!-- Diagrama explicativo del funcionamiento -->
             <div class="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 shadow-2xl hover-lift">
               <div class="text-center mb-6">
                 <h3 class="text-xl font-bold text-accent mb-2">Proceso de Extracción</h3>
                 <p class="text-gray-400 text-sm">De navegador a contraseñas visibles</p>
               </div>
               
-              <!-- Diagrama de flujo -->
               <div class="space-y-6">
-                <!-- 1. Navegador -->
                 <div class="flex items-center justify-center">
                   <div class="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 w-32 text-center hover:bg-blue-500/30 transition-all">
                     <div class="text-2xl mb-2">🌐</div>
@@ -266,12 +257,10 @@
                   </div>
                 </div>
                 
-                <!-- Flecha hacia abajo -->
                 <div class="flex justify-center">
                   <div class="text-accent text-3xl animate-bounce">↓</div>
                 </div>
                 
-                <!-- 2. Base de datos -->
                 <div class="flex items-center justify-center">
                   <div class="bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-4 w-32 text-center hover:bg-yellow-500/30 transition-all">
                     <div class="text-2xl mb-2">🗄️</div>
@@ -280,12 +269,10 @@
                   </div>
                 </div>
                 
-                <!-- Flecha hacia abajo -->
                 <div class="flex justify-center">
                   <div class="text-accent text-3xl animate-bounce" style="animation-delay: 0.2s;">↓</div>
                 </div>
                 
-                <!-- 3. Desencriptación -->
                 <div class="flex items-center justify-center">
                   <div class="bg-red-500/20 border border-red-500/30 rounded-lg p-4 w-32 text-center hover:bg-red-500/30 transition-all">
                     <div class="text-2xl mb-2">🔐</div>
@@ -309,7 +296,6 @@
                 </div>
               </div>
               
-              <!-- Información técnica -->
               <div class="mt-6 glass-effect rounded-lg p-4">
                 <div class="text-xs text-gray-400 space-y-1">
                   <div class="flex justify-between">
@@ -322,7 +308,6 @@
           </div>
         </div>
         
-        <!-- Explicación detallada -->
         <div class="lg:w-1/2 space-y-6">
           <h3 class="text-3xl font-bold text-gradient">Proceso Técnico</h3>
           
@@ -372,7 +357,6 @@
     </div>
   </section>
 
-  <!-- Demo Section -->
   <section id="demo" class="py-20 section-enter">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -432,7 +416,6 @@
     </div>
   </section>
 
-  <!-- Features Section -->
   <section id="features" class="py-20 section-enter">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-16">
@@ -478,7 +461,6 @@
     </div>
   </section>
 
-  <!-- Prerequisites Section -->
   <section class="py-16 section-enter">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -509,7 +491,6 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
   <section class="py-16 section-enter">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-12">
@@ -561,23 +542,19 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-8 text-center text-gray-500 text-sm">
     <div>
       <span>&copy; 2025 El Ojo del Crimen. Desarrollado por <span class="text-accent">Salvador Mellado.</span> Uso educativo y de auditoría personal.</span>
     </div>
   </footer>
 
-  <!-- FAQ Toggle Script -->
   <script>
     function toggleFaq(item) {
       const content = item.querySelector('.faq-content');
       const icon = item.querySelector('.faq-icon');
       const isOpen = !content.classList.contains('hidden');
-      // Cierra todos los demás
       document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('.faq-icon').forEach(el => el.textContent = '+');
-      // Abre/cierra el actual
       if (!isOpen) {
         content.classList.remove('hidden');
         icon.textContent = '−';
@@ -587,14 +564,12 @@
       }
     }
 
-    // Animación de entrada de secciones
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.section-enter').forEach((el, i) => {
         setTimeout(() => el.classList.add('visible'), 200 + i * 200);
       });
     });
 
-    // Abrir video demo
     function openVideo() {
       window.open('https://youtu.be/G1Em1alNEHM', '_blank');
     }
